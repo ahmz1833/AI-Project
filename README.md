@@ -24,7 +24,7 @@
 
 | نمونه خروجی‌های مدل | |
 | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/loss_plot.png" width="100%"/> | |
+| <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/loss_plot.png" width="100%"/> | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i5.png" width="100%"/> |
 | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i1.png" width="100%"/> | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i2.png" width="100%"/> |
 | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i3.png" width="100%"/> | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i4.png" width="100%"/> |
 
@@ -34,9 +34,17 @@
 سه نسخه مختلف از این معماری پیاده‌سازی و نتایج آن‌ها با یکدیگر مقایسه شد:
 
 <div dir="rtl">
-1. **UNet معمولی (Vanilla UNet):** پیاده‌سازی پایه‌ی معماری UNet.
-2. **Attention UNet:** افزودن مکانیزم توجه (Attention Gates) برای تمرکز شبکه روی نواحی مهم‌تر تصویر.
-3. **Residual UNet:** در این نسخه، بلوک‌های کانولوشنی استاندارد با **بلوک‌های باقی‌مانده (Residual Blocks)** جایگزین شدند؛ که شامل Skip Connection هستند؛ این کار به بهبود جریان گرادیان در طول شبکه کمک کرده و امکان آموزش مدل‌های عمیق‌تر بدون مشکل محو شدگی گرادیان (Vanishing Gradient) را فراهم می‌کند.
+<ol>
+  <li>
+    <b>UNet معمولی (Vanilla UNet):</b> پیاده‌سازی پایه‌ی معماری UNet.
+  </li>
+  <li>
+    <b>Attention UNet:</b> افزودن مکانیزم توجه (Attention Gates) برای تمرکز شبکه روی نواحی مهم‌تر تصویر.
+  </li>
+  <li>
+    <b>Residual UNet:</b> در این نسخه، بلوک‌های کانولوشنی استاندارد با <b>بلوک‌های باقی‌مانده (Residual Blocks)</b> جایگزین شدند؛ که شامل Skip Connection هستند. این کار به بهبود جریان گرادیان در طول شبکه کمک کرده و امکان آموزش مدل‌های عمیق‌تر بدون مشکل محو شدگی گرادیان (Vanishing Gradient) را فراهم می‌کند.
+  </li>
+</ol>
 </div>
 
 ### ویدئوی ارائه
@@ -97,16 +105,30 @@
 **معماری شبکه‌ها:**
 
 <div dir="rtl">
-- **Actor (Policy Network):** یک شبکه عصبی پیشخور (MLP) که وضعیت (State) را به عنوان ورودی دریافت کرده و پارامترهای یک توزیع گوسی (میانگین و انحراف معیار) را برای فضای عمل خروجی می‌دهد.
-- **Critic (Q-Networks):** از تکنیک **Clipped Double Q-Learning** با دو شبکه Q مجزا برای کاهش بیش‌تخمینی (Overestimation) مقادیر Q استفاده شد. هر دو شبکه نیز MLP هستند.
+<ul>
+  <li>
+    <b>Actor (Policy Network):</b> یک شبکه عصبی پیشخور (MLP) که وضعیت (State) را به عنوان ورودی دریافت کرده و پارامترهای یک توزیع گوسی (میانگین و انحراف معیار) را برای فضای عمل خروجی می‌دهد.
+  </li>
+  <li>
+    <b>Critic (Q-Networks):</b> از تکنیک <b>Clipped Double Q-Learning</b> با دو شبکه Q مجزا برای کاهش بیش‌تخمینی (Overestimation) مقادیر Q استفاده شد. هر دو شبکه نیز MLP هستند.
+  </li>
+</ul>
 </div>
+
 
 **فرآیند آموزش:**
 
 <div dir="rtl">
-- **Replay Buffer:** تجربیات ایجنت در یک حافظه ذخیره شده و در هر مرحله از آموزش، یک بچ (Batch) تصادفی از آن برای به‌روزرسانی شبکه‌ها نمونه‌گیری می‌شود.
-- **به‌روزرسانی پارامترها:** شبکه‌های Actor، Critic و پارامتر دمای انتروپی (α) به صورت متناوب با استفاده از بهینه‌ساز Adam آپدیت می‌شوند.
+<ul>
+  <li>
+    <b>Replay Buffer:</b> تجربیات ایجنت در یک حافظه ذخیره شده و در هر مرحله از آموزش، یک بچ (Batch) تصادفی از آن برای به‌روزرسانی شبکه‌ها نمونه‌گیری می‌شود.
+  </li>
+  <li>
+    <b>به‌روزرسانی پارامترها:</b> شبکه‌های Actor، Critic و پارامتر دمای انتروپی (α) به صورت متناوب با استفاده از بهینه‌ساز Adam آپدیت می‌شوند.
+  </li>
+</ul>
 </div>
+
 
 ### ویدئوی ارائه
 

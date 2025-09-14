@@ -1,0 +1,6 @@
+[submodule "Phase2-SAC"]
+	path = Phase2-SAC
+	url = git@github.com:ta-tahmasebi/SAC-RL.git
+[submodule "Phase1-RoadNet"]
+	path = Phase1-RoadNet
+	url = git@github.com:ta-tahmasebi/RoadNet.git

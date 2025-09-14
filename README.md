@@ -24,9 +24,9 @@
 
 | نمونه خروجی‌های مدل | |
 | :---: | :---: |
-| <img src="Phase1-RoadNet/images/loss_plot.png" width="100%"/> | |
-| <img src="Phase1-RoadNet/images/i1.png" width="100%"/> | <img src="Phase1-RoadNet/images/i2.png" width="100%"/> |
-| <img src="Phase1-RoadNet/images/i3.png" width="100%"/> | <img src="Phase1-RoadNet/images/i4.png" width="100%"/> |
+| <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/loss_plot.png" width="100%"/> | |
+| <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i1.png" width="100%"/> | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i2.png" width="100%"/> |
+| <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i3.png" width="100%"/> | <img src="https://raw.githubusercontent.com/ta-tahmasebi/RoadNet/refs/heads/main/images/i4.png" width="100%"/> |
 
 
 ### رویکرد
@@ -52,13 +52,13 @@
 <table width="100%">
   <tr>
     <td width="33%">
-      <img src="Phase2-SAC/images/3.png?raw=true" alt="Learn" width="100%">
+      <img src="https://raw.githubusercontent.com/ta-tahmasebi/SAC-RL/refs/heads/main/images/3.png" alt="Learn" width="100%">
     </td>
     <td width="33%">
-      <img src="Phase2-SAC/images/1.png?raw=true" alt="Score" width="100%">
+      <img src="https://raw.githubusercontent.com/ta-tahmasebi/SAC-RL/refs/heads/main/images/1.png" alt="Score" width="100%">
     </td>
     <td width="33%">
-      <img src="Phase2-SAC/images/2.png?raw=true" alt="Score" width="100%">
+      <img src="https://raw.githubusercontent.com/ta-tahmasebi/SAC-RL/refs/heads/main/images/2.png" alt="Score" width="100%">
     </td>
   </tr>
 </table>
